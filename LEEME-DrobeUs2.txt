@@ -1,0 +1,45 @@
+DrobeUs2 - QUE SE AGREGO (nada de lo tuyo se renombro ni se borro)
+===================================================================
+
+Se conservaron tus IDs, variables, nombres, estilos y colores.
+
+PANTALLAS NUEVAS
+- DetalleMateriaActivity  Dentro de una materia: pestañas Apuntes, Trabajos, Fechas y Notas
+                          (crear, editar, eliminar; marcar tareas como entregadas; fotos y archivos)
+- NotasActivity           Promedio del periodo y de cada materia
+- AgendaActivity          Semana de lunes a domingo, entregas, parciales y recordatorios
+- PerfilActivity          Ver/editar perfil, cerrar sesion y eliminar cuenta (se abre con "Mi perfil" en Inicio)
+
+ARCHIVOS NUEVOS
+- Util.kt, Archivos.kt, HorarioImport.kt
+- layouts: activity_detalle_materia, dialog_form, activity_notas, item_nota_materia,
+  activity_agenda, activity_perfil
+- res/xml/file_paths.xml (para abrir archivos descargados)
+
+CAMBIOS EN ARCHIVOS TUYOS (solo agregados)
+- MateriasActivity: color elegible, horario con varios dias, boton "Cargar horario desde un archivo",
+  tocar una materia la abre, boton ⋮ visible para editar/eliminar (la pulsacion larga sigue funcionando)
+- dialog_materia.xml: se agrego selector de color y campo "otros dias" (todos tus IDs siguen igual;
+  se quito un backgroundTint invalido que apuntaba a un drawable)
+- item_materia.xml: boton ⋮ (tvOpciones)
+- activity_materias.xml: boton btnCargarHorario
+- activity_home.xml: "Mi perfil" (tvPerfil) junto a "Cambiar cuenta"
+- activity_onboarding.xml: texto "Imagen, PDF, Word o texto"
+- HomeActivity: abre Mi perfil y actualiza el saludo
+- OnboardingActivity: elige cualquier documento y crea las materias automaticamente
+- NavBar: Agenda y Notas ya navegan
+- ApiService / DataModels / AuthModels: endpoints y modelos nuevos
+- ApiClient: tiempos de espera de 120 s (el analisis de horario puede tardar)
+- UserPrefs: saveName, school, career
+- AndroidManifest: nuevas pantallas y FileProvider
+
+IMPORTANTE - BACKEND
+La app usa tu API en Render. Para que funcionen "Cargar horario desde un archivo" y
+"subir fotos/archivos" hay que agregar al backend los archivos del zip
+DrobeUs-API-agregados.zip (instrucciones en LEEME-BACKEND.txt).
+Todo lo demas funciona con el backend que ya tienes en Render.
+
+COMO USARLO
+1) Descomprime y abre la carpeta DrobeUs2 en Android Studio.
+2) File > Sync Project with Gradle Files, luego Build > Rebuild Project.
+3) Run.

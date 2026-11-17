@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@drawable/bg_nav"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <TextView android:id="@+id/navInicio" style="@style/Nav" android:text="Inicio" />
+    <TextView android:id="@+id/navMaterias" style="@style/Nav" android:text="Materias" />
+    <TextView android:id="@+id/navAgenda" style="@style/Nav" android:text="Agenda" />
+    <TextView android:id="@+id/navNotas" style="@style/Nav" android:text="Notas" />
+</LinearLayout>

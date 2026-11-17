@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/tvVolver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="serif"
+            android:padding="4dp"
+            android:text="‹ Inicio"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="start"
+            android:text="Mi perfil" />
+
+        <TextView
+            android:id="@+id/tvCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:fontFamily="serif"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp" />
+
+        <TextView style="@style/Etiqueta" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="NOMBRE" />
+        <EditText android:id="@+id/etNombre" style="@style/Campo"
+            android:hint="Tu nombre" android:inputType="textPersonName|textCapWords" />
+
+        <TextView style="@style/Etiqueta" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="UNIVERSIDAD - COLEGIO" />
+        <EditText android:id="@+id/etInstitucion" style="@style/Campo"
+            android:hint="Universidad - Colegio" />
+
+        <TextView style="@style/Etiqueta" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="CARRERA" />
+        <EditText android:id="@+id/etCarrera" style="@style/Campo"
+            android:hint="Carrera" />
+
+        <TextView style="@style/Etiqueta" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="PERIODO ACTUAL" />
+        <EditText android:id="@+id/etPeriodo" style="@style/Campo"
+            android:hint="Semestre - Grado (ej. 2026-2)" />
+
+        <Button
+            android:id="@+id/btnGuardar"
+            style="@style/Boton"
+            android:layout_marginTop="32dp"
+            android:text="Guardar cambios" />
+
+        <Button
+            android:id="@+id/btnCerrarSesion"
+            style="@style/Boton"
+            android:layout_marginTop="12dp"
+            android:text="Cerrar sesión" />
+
+        <Button
+            android:id="@+id/btnEliminarCuenta"
+            style="@style/Boton"
+            android:layout_marginTop="12dp"
+            android:text="Eliminar mi cuenta" />
+    </LinearLayout>
+</ScrollView>

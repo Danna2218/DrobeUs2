@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Mis materias" />
+
+            <TextView
+                android:id="@+id/tvPeriodo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="serif"
+                android:padding="4dp"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvPildora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_field"
+                android:fontFamily="serif"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="6dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+
+            <GridLayout
+                android:id="@+id/gridMaterias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:columnCount="2" />
+
+            <TextView
+                android:id="@+id/tvVacio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Aún no tienes materias en este periodo."
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="Toca ⋮ en una materia para editarla o eliminarla"
+                android:textColor="#CCFFFFFF"
+                android:textSize="9sp" />
+
+            <Button
+                android:id="@+id/btnNuevaMateria"
+                style="@style/Boton"
+                android:layout_marginTop="16dp"
+                android:text="+ Nueva materia" />
+
+            <Button
+                android:id="@+id/btnCargarHorario"
+                style="@style/Boton"
+                android:layout_marginTop="10dp"
+                android:text="Cargar horario desde un archivo" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bar_nav" />
+</LinearLayout>
